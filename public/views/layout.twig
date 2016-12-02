@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel='stylesheet' href='/css/bootstrap.min.css' />
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+          {% if not user %}
+            <li role="presentation"><a href="/login">Login</a></li>
+                 <li role="presentation"><a href="/admin">Admin</a></li>
+            <li role="presentation"><a href="/register">Register</a></li>
+          {% else %}
+            <li role="presentation" class="active"><a href="/admin">Dashboard</a></li>
+            <li role="presentation"><a href="/profile">Profile</a></li>
+            <li role="presentation"><a href="/logout">Logout</a></li>
+          {% endif %}
+
+          </ul>
+        </nav>
+        <h3 class="text-muted"><a class="navbar-brand" href="/">Login App Demo</a></h3>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+            {% if success_msg != "" %}
+                <div class="alert alert-success">{{ success_msg }}</div>
+            {% endif %}
+            {% if error_msg != "" %}
+                <div class="alert alert-danger">{{ error_msg }}</div>
+            {% endif %}
+            {% if error != "" %}
+                <div class="alert alert-danger">{{ error }}</div>    
+            {% endif %}
+            
+            {% block body %}{% endblock %}      
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2016 Company, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+    
+
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- App scripts -->
+    
+    <script type="text/javascript" src="controllers/userController.client.js"></script>
+    <script type="text/javascript" src="common/ajax-functions.js"></script>
+
+    {% block scripts %}
+        
+    {% endblock scripts %}
+  </body>
+</html>

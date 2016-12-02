@@ -1,0 +1,200 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+/* Clementine styles */
+
+/****** Login Styling ******/
+
+.login {
+  margin: 26px auto 0 auto;
+  text-align: center;
+}
+
+#login-btn {
+  width: 225px;
+  padding: 7px 5px;
+}
+
+.btn p {
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+
+.btn > img {
+  float: left;
+  margin-left: 10px
+}
+
+.clementine-text { /* Styling for the Clementine.js text */
+  padding: 0;
+  margin: -25px 0 0 0;
+  font-weight: 500;
+  font-size: 60px;
+  color: #FFA000;
+}
+
+/****** Click Styling ******/
+
+.btn-container {  /* Styling for the div that contains the buttons */
+  margin: -10px auto 0 auto;
+  text-align: center;
+}
+
+.btn {  /* Styling for buttons */
+  margin: 0 8px;
+  color: white;
+  background-color: #00BCD4;
+  display: inline-block;
+  border: 0;
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 10px 5px;
+  width: 100px;
+  font-weight: 500;
+}
+
+.btn:focus {  /* Remove outline when hovering over button */
+  outline: none;
+}
+
+.btn:active { /* Scale the button down by 10% when clicking on button */
+  transform: scale(0.9, 0.9);
+  -webkit-transform: scale(0.9, 0.9);
+  -moz-transform: scale(0.9, 0.9);
+}
+
+.btn-delete { /* Styling for delete button */
+  background-color: #ECEFF1;
+  color: #212121;
+}
+
+#click-nbr {
+  font-weight: 400;
+}
+
+/****** Profile Styling ******/
+
+.google-profile {
+  width: 350px;
+  height: 200px;
+  border-radius: 3px;
+  margin: 86px auto 0 auto;
+  background-color: #EEE;
+  text-align: center;
+  color: #000;
+}
+
+.google-profile p:first-child {
+  padding-top: 16px;
+}
+
+.google-profile p:nth-child(5) {
+  margin-bottom: 16px
+}
+
+.google-profile p {
+  margin: 0 0 0 16px;
+  text-align: left;
+}
+
+.profile-value {
+  font-weight: 400;
+}
+
+span {
+  font-weight: 500;
+}
+
+.google-profile > img {
+  padding-top: 16px;
+  margin-bottom: 16px;
+}
+
+.google-profile .menu:hover {
+  color: #FFA000;
+}
+
+.google-profile .menu:active {
+  color: #FF630D;
+}
+footer {
+  margin-top: 40px;
+}
